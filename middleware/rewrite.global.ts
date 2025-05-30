@@ -14,11 +14,21 @@ export default defineNuxtRouteMiddleware((to, from) => {
       // Validate locale
       const config = useRuntimeConfig()
       if (!config.public.locales.includes(locale)) {
-        return navigateTo('/en-us/international')
+        return navigateTo('/international')
+      }
+
+      // Handle international page
+      if (remainingPath === 'international') {
+        return navigateTo('/international')
       }
       
-      // Rewrite the path
+      // Rewrite the path for other pages
       return navigateTo(`/${locale}/locale/${remainingPath}`)
     }
+  }
+
+  // Redirect root to international
+  if (path === '/') {
+    return navigateTo('/international')
   }
 }) 
