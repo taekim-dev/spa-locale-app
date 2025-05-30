@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>Fail Page</h1>
+    <h1>Success Page</h1>
     <p>Current locale: {{ $route.params.locale }}</p>
-    <NuxtLink :to="`/${$route.params.locale}/locale/pinetree`">Back to Pinetree</NuxtLink>
+    <NuxtLink :to="`/${$route.params.locale}/pinetree`">Back to Pinetree</NuxtLink>
   </div>
 </template>
 

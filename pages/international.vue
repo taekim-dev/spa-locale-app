@@ -4,7 +4,7 @@
     <div>
       <NuxtLink v-for="locale in config.public.locales" 
                 :key="locale" 
-                :to="`/webstore/${locale}/green/pinetree`"
+                :to="`/${locale}/pinetree`"
                 class="locale-link">
         Go to {{ locale }} Pinetree
       </NuxtLink>
